@@ -33,7 +33,11 @@ const download = (options) => {
     electronDownload({
       platform,
       arch: 'x64',
-      version,
+
+      mirror: 'https://dl.frontapp.com/',
+      customDir: 'electron-artifacts/v8.3.0-front-1_20200601',
+      version: '8.3.0-front-1',
+
       symbols: true,
       quiet,
       force,
