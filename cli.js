@@ -12,7 +12,7 @@ const argv = require('yargs')
   })
   .option('version', {
     alias: 'v',
-    demandOption: true,
+    // demandOption: true,
     describe: 'electron version',
   })
   .option('quiet', {
@@ -21,6 +21,11 @@ const argv = require('yargs')
   })
   .option('force', {
     describe: 'redownload symbols if present in cache',
+  })
+  .option('platform', {
+    alias: 'p',
+    demandOption: true,
+    describe: 'platform (win32 or darwin)',
   })
   .help()
   .argv

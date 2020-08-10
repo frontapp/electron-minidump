@@ -5,8 +5,9 @@ const electronDownload = require('electron-download')
 const extractZip = require('extract-zip')
 
 const electronMinidump = async (options) => {
-  const {version, quiet, force, file} = options
-  const platform = 'win32'
+  const {version, quiet, force, file, platform} = options
+  // const platform = 'win32'
+  // const platform = 'darwin'
   const directory = path.join(__dirname, 'cache', version + '-' + platform)
 
   await download({version, quiet, directory, platform, force})
